@@ -57,7 +57,7 @@ jobs:
           token: ${{ secrets.METWORK_ACCESS_TOKEN }}
           repository: metwork-framework/mfserv
           event-type: metwork-trigger-${{ steps.SetVariables.outputs.branch }}
-          client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "${{ steps.SetVariables.outputs.os }}"}'
+          client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "centos8"}'
       - name: dispatch mfdata
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch == 'experimental_centos8' && steps.DockerStep.outputs.dispatch_bypass == 'false' }}
         uses: peter-evans/repository-dispatch@v1
@@ -65,7 +65,7 @@ jobs:
           token: ${{ secrets.METWORK_ACCESS_TOKEN }}
           repository: metwork-framework/mfdata
           event-type: metwork-trigger-${{ steps.SetVariables.outputs.branch }}
-          client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "${{ steps.SetVariables.outputs.os }}"}'
+          client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "centos8"}'
       - name: dispatch mfbase
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch == 'experimental_centos8' && steps.DockerStep.outputs.dispatch_bypass == 'false' }}
         uses: peter-evans/repository-dispatch@v1
@@ -73,7 +73,7 @@ jobs:
           token: ${{ secrets.METWORK_ACCESS_TOKEN }}
           repository: metwork-framework/mfbase
           event-type: metwork-trigger-${{ steps.SetVariables.outputs.branch }}
-          client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "${{ steps.SetVariables.outputs.os }}"}'
+          client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "centos8"}'
       - name: dispatch mfadmin
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch == 'experimental_centos8' && steps.DockerStep.outputs.dispatch_bypass == 'false' }}
         uses: peter-evans/repository-dispatch@v1
@@ -81,7 +81,7 @@ jobs:
           token: ${{ secrets.METWORK_ACCESS_TOKEN }}
           repository: metwork-framework/mfadmin
           event-type: metwork-trigger-${{ steps.SetVariables.outputs.branch }}
-          client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "${{ steps.SetVariables.outputs.os }}"}'
+          client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "centos8"}'
       - name: dispatch mfsysmon
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch == 'experimental_centos8' && steps.DockerStep.outputs.dispatch_bypass == 'false' }}
         uses: peter-evans/repository-dispatch@v1
@@ -89,7 +89,7 @@ jobs:
           token: ${{ secrets.METWORK_ACCESS_TOKEN }}
           repository: metwork-framework/mfsysmon
           event-type: metwork-trigger-${{ steps.SetVariables.outputs.branch }}
-          client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "${{ steps.SetVariables.outputs.os }}"}'
+          client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "centos8"}'
       - name: dispatch mfextaddon_python2
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch == 'experimental_centos8' && steps.DockerStep.outputs.dispatch_bypass == 'false' }}
         uses: peter-evans/repository-dispatch@v1
@@ -97,7 +97,7 @@ jobs:
           token: ${{ secrets.METWORK_ACCESS_TOKEN }}
           repository: metwork-framework/mfextaddon_python2
           event-type: metwork-trigger-${{ steps.SetVariables.outputs.branch }}
-          client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "${{ steps.SetVariables.outputs.os }}"}'
+          client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "centos8"}'
       - name: dispatch mfextaddon_rabbitmq
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch == 'experimental_centos8' && steps.DockerStep.outputs.dispatch_bypass == 'false' }}
         uses: peter-evans/repository-dispatch@v1
@@ -105,7 +105,7 @@ jobs:
           token: ${{ secrets.METWORK_ACCESS_TOKEN }}
           repository: metwork-framework/mfextaddon_rabbitmq
           event-type: metwork-trigger-${{ steps.SetVariables.outputs.branch }}
-          client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "${{ steps.SetVariables.outputs.os }}"}'
+          client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "centos8"}'
 
 
 
