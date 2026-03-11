@@ -59,7 +59,7 @@ jobs:
 
       - name: dispatch mfserv
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch != 'null' && steps.DockerStep.outputs.dispatch_bypass == 'false'  && steps.SetVariables.outputs.os == 'centos8' }}
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@v4
         with:
           token: ${{ secrets.METWORK_ACCESS_TOKEN }}
           repository: metwork-framework/mfserv
@@ -67,7 +67,7 @@ jobs:
           client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "centos8"}'
       - name: dispatch mfdata
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch != 'null' && steps.DockerStep.outputs.dispatch_bypass == 'false' && steps.SetVariables.outputs.os == 'centos8' }}
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@v4
         with:
           token: ${{ secrets.METWORK_ACCESS_TOKEN }}
           repository: metwork-framework/mfdata
@@ -75,7 +75,7 @@ jobs:
           client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "centos8"}'
       - name: dispatch mfbase
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch != 'null' && steps.DockerStep.outputs.dispatch_bypass == 'false' && steps.SetVariables.outputs.os == 'centos8' }}
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@v4
         with:
           token: ${{ secrets.METWORK_ACCESS_TOKEN }}
           repository: metwork-framework/mfbase
@@ -83,7 +83,7 @@ jobs:
           client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "centos8"}'
       - name: dispatch mfadmin
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch != 'null' && steps.DockerStep.outputs.dispatch_bypass == 'false' && steps.SetVariables.outputs.os == 'centos8' }}
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@v4
         with:
           token: ${{ secrets.METWORK_ACCESS_TOKEN }}
           repository: metwork-framework/mfadmin
@@ -91,7 +91,7 @@ jobs:
           client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "centos8"}'
       - name: dispatch mfsysmon
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch != 'null' && steps.DockerStep.outputs.dispatch_bypass == 'false' && steps.SetVariables.outputs.os == 'centos8' }}
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@v4
         with:
           token: ${{ secrets.METWORK_ACCESS_TOKEN }}
           repository: metwork-framework/mfsysmon
@@ -99,7 +99,7 @@ jobs:
           client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "centos8"}'
       - name: dispatch mfextaddon_scientific
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch != 'null' && steps.DockerStep.outputs.dispatch_bypass == 'false' && steps.SetVariables.outputs.os == 'centos8' }}
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@v4
         with:
           token: ${{ secrets.METWORK_ACCESS_TOKEN }}
           repository: metwork-framework/mfextaddon_scientific
@@ -107,7 +107,7 @@ jobs:
           client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "centos8"}'
       - name: dispatch mfextaddon_extratools
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch != 'null' && steps.DockerStep.outputs.dispatch_bypass == 'false' && steps.SetVariables.outputs.os == 'centos8' }}
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@v4
         with:
           token: ${{ secrets.METWORK_ACCESS_TOKEN }}
           repository: metwork-framework/mfextaddon_extratools
@@ -115,7 +115,7 @@ jobs:
           client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "centos8"}'
       - name: dispatch mfextaddon_mapserver
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch != 'null' && steps.DockerStep.outputs.dispatch_bypass == 'false' && steps.SetVariables.outputs.os == 'centos8' }}
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@v4
         with:
           token: ${{ secrets.METWORK_ACCESS_TOKEN }}
           repository: metwork-framework/mfextaddon_mapserver
@@ -123,7 +123,7 @@ jobs:
           client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "centos8"}'
       - name: dispatch mfextaddon_vim
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch != 'null' && steps.DockerStep.outputs.dispatch_bypass == 'false' && steps.SetVariables.outputs.os == 'centos8' }}
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@v4
         with:
           token: ${{ secrets.METWORK_ACCESS_TOKEN }}
           repository: metwork-framework/mfextaddon_vim
@@ -131,7 +131,7 @@ jobs:
           client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "centos8"}'
       - name: dispatch mfextaddon_rabbitmq
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch != 'null' && steps.DockerStep.outputs.dispatch_bypass == 'false' && steps.SetVariables.outputs.os == 'centos8' }}
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@v4
         with:
           token: ${{ secrets.METWORK_ACCESS_TOKEN }}
           repository: metwork-framework/mfextaddon_rabbitmq
@@ -139,7 +139,7 @@ jobs:
           client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "centos8"}'
       - name: dispatch mfextaddon_elasticsearch
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch != 'null' && steps.SetVariables.outputs.branch != 'release_1.1' && steps.DockerStep.outputs.dispatch_bypass == 'false' && steps.SetVariables.outputs.os == 'centos8' }}
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@v4
         with:
           token: ${{ secrets.METWORK_ACCESS_TOKEN }}
           repository: metwork-framework/mfextaddon_elasticsearch
@@ -147,7 +147,7 @@ jobs:
           client-payload: '{"branch": "${{ steps.SetVariables.outputs.branch }}", "os": "centos8"}'
       - name: dispatch mfextaddon_php
         if: ${{ github.event_name != 'pull_request' && steps.SetVariables.outputs.branch != 'null' && steps.SetVariables.outputs.branch != 'release_1.1' && steps.SetVariables.outputs.branch != 'release_2.0' && steps.DockerStep.outputs.dispatch_bypass == 'false' && steps.SetVariables.outputs.os == 'centos8' }}
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@v4
         with:
           token: ${{ secrets.METWORK_ACCESS_TOKEN }}
           repository: metwork-framework/mfextaddon_php
